@@ -1,0 +1,32 @@
+<div class="row w-100 mx-0 auth-page">
+  <div class="col-md-8 col-xl-6 mx-auto">
+    <div class="card">
+      <div class="row">
+        <div class="col-md-4 pe-md-0">
+          <img src="assets/images/logo-img-1.jpg" class="img-fluid mt-5">
+        </div>
+        <div class="col-md-8 ps-md-0">
+          <div class="auth-form-wrapper px-4 py-5">
+            <a routerLink="." class="nobleui-logo d-block mb-2">Just<span>-Send</span></a>
+            <h5 class="text-muted fw-normal mb-4">Content de te revoir! Connectez-vous à votre compte.</h5>
+            <form class="forms-sample">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Addresse email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="" value="">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" autocomplete="current-password" placeholder="" value="">
+              </div>
+              <div>
+                <button type="submit" class="btn btn-primary me-2 mb-2 mb-md-0" (click)="onLoggedin($event)">Connexion</button>
+
+                <a href="#" class=" float-end mt-3 text-dark"> <i class="mdi mdi-lock-outline" ></i> Mot de passe oublié</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

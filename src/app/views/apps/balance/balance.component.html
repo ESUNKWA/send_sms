@@ -1,0 +1,29 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/send-sms">Envoie sms</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Balance</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="text-center mb-3 mt-1">Balance</h3>
+        <div id="content">
+          <ul class="timeline">
+            <li class="event" data-date="Stock SMS">
+              <h3 class="title">Stock disponible</h3>
+              <h3><span class="badge bg-danger" >{{balance[0].availableUnits}}</span></h3>
+            </li>
+            <li class="event" data-date="Expiration SMS">
+              <h3 class="title">Date expiration</h3>
+              <h3><span class="badge bg-danger" >{{balance[0].expirationDate | date:'dd-MM-YYYY à HH:mm:ss'}}</span></h3>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

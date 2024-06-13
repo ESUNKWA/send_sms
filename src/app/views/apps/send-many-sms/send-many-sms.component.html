@@ -1,0 +1,92 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/send-sms">Envoie sms</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Campagne</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="text-center text-danger mb-3 mt-1">Envoi de sms en masse</h3>
+        <div class="container">  
+          <div class="row">
+            <div class="col-md-9">
+              <form>                
+      
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Message à envoyé</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" maxlength="160" rows="8"></textarea>
+                </div>
+
+                <div class="row">
+                  <div class="mb-3 col-md-10">
+                    <label class="form-label" for="formFile">Fichier (<span class="text-danger" >xlx, csv</span>)</label>
+                    <a href="http://" class="text-success float-end" title="Télécharger le modèl de fichier pour la campagne" >Télécharger le modèl de fichier</a>
+                    <input class="form-control" type="file" id="formFile" (change)="onFileSelected($event)" accept=".xlsx, .xls">
+                  </div>
+                  <div class="mt-0 col-md-2">
+                    <label class="form-label text-white" for="formFile">Enregistrer</label>
+                    <button class="btn btn-primary float-end"type="submit">Enregistrer</button>
+                  </div>
+                </div>
+
+                
+                <pre>{{ excelData | json }}</pre>
+
+              </form>
+            </div>
+            <div class="col-md-3">
+              <img src="assets/images/send_sms.png"  class="img-responsive mt-4 float-end" style="height: 200px;" >
+            </div>
+           
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-12">
+              <div class="table-responsive">
+                <table id="dataTableExample" class="table">
+                  <thead>
+                    <tr>
+                      <th>N°</th>
+                      <th>Nom du fichier</th>
+                      <th>Nombre le ligne</th>
+                      <th>Chargé le</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                    <tr>
+                      <td>Ashton Cox</td>
+                      <td>Junior Technical Author</td>
+                      <td>San Francisco</td>
+                      <td>66</td>
+                      <td>2009/01/12</td>
+                      <td>
+                        <button type="button" class="btn btn-warning" >Démarrer la campagne</button>
+                      </td>
+                    </tr>
+                    
+                    
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
